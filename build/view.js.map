@@ -1,0 +1,1 @@
+{"version":3,"file":"view.js","mappings":";;;;;AAAA;AACAA,OAAO,CAACC,GAAG,CAAC,4DAA4D,CAAC;AACzE,8B","sources":["webpack://example-inner-block/./src/view.js"],"sourcesContent":["/* eslint-disable no-console */\nconsole.log(\"Hello World! (from create-block-example-inner-block block)\");\n/* eslint-enable no-console */\n"],"names":["console","log"],"sourceRoot":""}
