@@ -11,7 +11,7 @@ import { __ } from "@wordpress/i18n";
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from "@wordpress/block-editor";
+import { useBlockProps, useInnerBlocksProps } from "@wordpress/block-editor";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -30,12 +30,11 @@ import "./editor.scss";
  * @return {WPElement} Element to render.
  */
 export default function Edit() {
-	return (
-		<p {...useBlockProps()}>
-			{__(
-				"Example Wrapper Block – hello from the editor!",
-				"example-inner-block"
-			)}
-		</p>
-	);
+	const blockProps = useBlockProps();
+	const innerBlocksProps = useInnerBlocksProps(blockProps, {
+		allowedBlocks: ["core/image"],
+		template: [["core/image"], ["core/image"]],
+		templateLock: "all",
+	});
+	return <div {...innerBlocksProps}></div>;
 }

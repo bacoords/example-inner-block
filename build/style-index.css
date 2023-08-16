@@ -8,9 +8,22 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-create-block-example-inner-block {
-  background-color: #21759b;
-  color: #fff;
-  padding: 2px;
+  position: relative;
+}
+.wp-block-create-block-example-inner-block figure {
+  max-width: 100%;
+}
+.wp-block-create-block-example-inner-block figure figcaption {
+  display: none;
+}
+.wp-block-create-block-example-inner-block figure:nth-of-type(1) {
+  transform: scale(0.9);
+}
+.wp-block-create-block-example-inner-block figure:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0.9) translate(-20%, -20%);
 }
 
 /*# sourceMappingURL=style-index.css.map*/

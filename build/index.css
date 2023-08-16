@@ -6,8 +6,17 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.wp-block-create-block-example-inner-block {
-  border: 1px dotted #f00;
+.wp-block-create-block-example-inner-block.is-selected, .wp-block-create-block-example-inner-block.has-child-selected {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.wp-block-create-block-example-inner-block.is-selected figure:nth-of-type(1), .wp-block-create-block-example-inner-block.has-child-selected figure:nth-of-type(1) {
+  position: relative;
+  transform: none;
+}
+.wp-block-create-block-example-inner-block.is-selected figure:nth-of-type(2), .wp-block-create-block-example-inner-block.has-child-selected figure:nth-of-type(2) {
+  position: relative;
+  transform: none;
 }
 
 /*# sourceMappingURL=index.css.map*/
